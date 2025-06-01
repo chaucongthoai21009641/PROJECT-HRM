@@ -1,0 +1,31 @@
+.ant-table th.today-column {
+  background-color: rgba(255, 193, 7, 0.6) !important; /* Vàng nhạt */
+  transition: background-color 1s ease-in-out;
+  position: relative;
+  animation: fadeHighlight 2s forwards; /* Chỉnh sửa thời gian animation thành 2 giây */
+}
+
+/* Icon lấp lánh */
+/* .ant-table th.today-column::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation: sparkle 2s ease-in-out 1;
+  pointer-events: none;
+} */
+
+/* Hiệu ứng sáng lấp lánh của icon */
+/* @keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+} */

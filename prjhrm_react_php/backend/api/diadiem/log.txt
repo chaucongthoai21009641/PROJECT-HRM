@@ -1,0 +1,24 @@
+Array
+(
+    [tenDiaDiem] => furt Kassulke
+    [kinhDo] => 103.6187990
+    [viDo] => 16.7928470
+    [banKinh] => 533
+    [maDD] => 2
+)
+Array
+(
+    [tenDiaDiem] => town Abernathy
+    [kinhDo] => 107.1519920
+    [viDo] => 14.9498580
+    [banKinh] => 488
+    [maDD] => 4
+)
+Array
+(
+    [tenDiaDiem] => town Abernathy123
+    [kinhDo] => 107.1519920
+    [viDo] => 14.9498580
+    [banKinh] => 488
+    [maDD] => 4
+)

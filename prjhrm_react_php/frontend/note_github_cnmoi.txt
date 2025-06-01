@@ -1,0 +1,186 @@
+*** Lưu ý: Trước khi code phải lên trang GitHub xem có ai push code mới lên hay không. Nếu có phải git pull (lấy code mới nhất) về liền rồi mới code tiếp ***
+
+-- link GitHub "https://github.com/user1823-github/prjhrm.git" 
+1. "git pull" trước khi code
+2. Đẩy code lên GitHub
+  + git add .
+  + git commit -m 'nhap mo ta cua ban'
+  + git push
+
+3. Ví dụ: Tạo theo mô hình MVC
+  + View: vào Resour tự tạo folder theo cấu trúc trong đó
+  + Model: php artisan make:model TaiKhoan
+  + Controller: php artisan make:controller TaiKhoanController --api
+
+4 Tạo Migration và Factory, Seeder
+  + php artisan make:migration taikhoan_table
+  + php artisan make:factory TaiKhoan
+  + php artisan make:seeder TaiKhoanSeeder
+
+Dùng lệnh:
+1. Chạy server: php artisan serve
+2. Cách 1: Tạo bảng trong MySQL: php artisan migrate:refresh --seed
+
+Cách 2: Tạo dữ liệu mẫu từ migrate: php artisan db:seed    
+Cách 3: php artisan db:wipe - php artisan migrate --seed
+
+Reset timestrap: php artisan migrate:reset
+
+php artisan make:model HopThoai -mcr
+
+tui cần viết model, migration, controller cho bảng ca làm bao gồm maCL, tenCa, gioCheckInSom, gioCheckOutMuon
+
+settings: intelephense.diagnostics.undefined
+
+🔹 Tạo và checkout sang nhánh mới
+git checkout -b feature/lichlamviec
+git add .
+git commit -m "Cập nhật hiển thị lịch làm việc theo tháng"
+git push origin feature/lichlamviec
+
+xem nhánh hiện tại: git branch
+xem tất cả các nhánh: git branch -a
+
+1. Chuyển về nhánh chính
+git checkout master
+
+🔹 2. Cập nhật nhánh chính với code mới nhất từ remote (nếu làm việc nhóm)
+git pull origin master
+
+🔹 3. Merge nhánh feature/lichlamviec vào nhánh chính
+git merge feature/lichlamviec
+
+🔹 4. Push code lên remote
+git push master
+
+
+1. Xóa branch cục bộ (local)
+git branch -d ten-branch
+
+
+views/Admin/pages/TimeKeeping//QLCaLam/ThoiKhoaBieu/index.blade.php
+
+rong Google Chrome:
+
+Mở Developer Tools (F12 hoặc Ctrl + Shift + I).
+
+Chuyển qua tab Network.
+
+Chọn Disable cache (ở góc trên bên trái trong tab Network).
+
+Refresh lại trang với Ctrl + R hoặc Ctrl + Shift + R.
+
+
+Sửa db
+1 dia chi ip và 1 diadiem có nhiều (*) lichlamviec 
+thêm cột trạng thái cho bảng
++ DiaChiIP
++ DiaDiem
++ diachiip_lichlamviec(maDCIP, maLLV, trangThai): mối quan hệ là *..*
++ diadiem_lichlamviec(maDD, maLLV, trangThai): mối quan hệ là *..*
+
+
+
+
+// Giả sử đã có sẵn 5 IP trong DB (hoặc bạn tạo trước)
+$dsIP = DiaChiIP::pluck('maDCIP')->toArray();
+
+LichLamViec::factory(10)->create()->each(function ($lich) use ($dsIP) {
+    // Tạo bảng công tương ứng
+    $lich->bangCong()->create([
+        'tgCheckIn' => now()->setTime(rand(7, 8), rand(0, 59))->format('H:i:s'),
+        'tgCheckout' => now()->setTime(rand(11, 12), rand(0, 59))->format('H:i:s'),
+    ]);
+
+    // Gắn 1-2 IP ngẫu nhiên cho mỗi lịch làm việc
+    $ipNgauNhien = collect($dsIP)->random(rand(1, 2))->all();
+
+    $lich->diaChiIPs()->attach($ipNgauNhien, [
+        'trangThai' => 'active',
+        'created_at' => now(),
+        'updated_at' => now()
+    ]);
+});
+
+git checkout main
+git merge master --allow-unrelated-histories
+
+
+
+// React
+npx create-react-app@
+npm install react-router-dom
+npm install @ant-design/v5-patch-for-react-19 --save
+npm install axios react-router-dom bootstrap react-bootstrap
+npm install moment
+
+
+zrok enable WiCYM0HFycUy
+
+zrok share public --headless http://localhost:5173
+
+zrok share public --backend-mode proxy http://localhost:80
+zrok share public --backend-mode proxy http://localhost:5173
+
+choco install mkcert
+mkcert localhost
+
+
+<Directory />
+    AllowOverride All
+    Require all granted
+</Directory>
+
+<Directory />
+    AllowOverride none
+    Require all denied 
+</Directory>
+
+
+
+zrok share public --backend-url=http://localhost/prjhrm_react_php --headers ngrok-skip-browser-warning:true
+
+zrok share public --backend-url=http://localhost --headers ngrok-skip-browser-warning:true
+
+
+
+zrok share public E:\HK6\PHP\prjhrm_react_php
+
+zrok share public --backend-mode web --port 3000 --backend-mode api --port 4000
+
+
+
+zrok share public ./prjhrm_react_php/backend --backend-mode proxy
+zrok share public ./prjhrm_react_php/frontend --backend-mode web
+
+
+
+này api diadiem/gps.php nè
+https://hv3pvqodm6ne.share.zrok.io/prjhrm_react_php/backend/api/diadiem/gps.php
+
+{
+maDD: 6
+tenDiaDiem: "Gò Vấp"
+viDo: "10.8306171"
+kinhDo: "106.6779308"
+banKinh: 500
+trangThai: 1
+}
+▼{
+maDD: 5
+tenDiaDiem: "Q11"
+viDo: "10.8787963"
+kinhDo: "106.6579132"
+banKinh: 500
+trangThai: 1
+}
+▼{
+maDD: 4
+tenDiaDiem: "aaaa"
+viDo: "20.1132850"
+kinhDo: "108.9800000"
+banKinh: 1000
+trangThai: 1
+}
+
+Này dữ liệu của api đó nè tui muốn khi nhấn nút chấm công nó sẽ so sánh vị trí hiện tại có nằm trong khu vực của các dữ liệu ở trên từ api đó hay ko nếu có thì chấm công nếu trangThai: 1 còn nếu trangThai: 0 thì báo ko cho phép chấm công ở vị trí này

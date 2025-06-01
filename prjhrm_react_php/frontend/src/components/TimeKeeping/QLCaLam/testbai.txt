@@ -1,0 +1,18 @@
+giờ hãy kết hợp api này
+http://localhost/projhrm_react_php/backend/api/calam/calam.php
+
+Có các cột như sau:
+[{"maCL":3,"tenCa":"Part-time","gioCheckInSom":6,"gioCheckOutMuon":3},
+
+Và api này: http://localhost/projhrm_react_php/backend/api/chitietcalam/chitietcalam.php
+
+Có các cột như sau: [{"maCTCL":8,"thuTrongTuan":4,"tgBatDau":"08:00:00","tgKetThuc":"17:00:00","tgBatDauNghi":"12:00:00","tgKetThucNghi":"13:00:00","heSoLuong":"1.00","tienThuong":"0.00","maCL":2},
+
+1 ca làm có nhiều chi tiết ca làm á 
+Khoan nha để tui gửi khúc code nữa để b thêm api vào
+
+
+Này là APi thêm nè:
+http://localhost/projhrm_react_php/backend/api/chitietcalam/insertchitietcalam.php
+http://localhost/projhrm_react_php/backend/api/calam/insertcalam.php
+này là file insertchitietcalam.php
