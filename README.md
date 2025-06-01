@@ -1,7 +1,7 @@
 # DỰ ÁN: XÂY DỰNG HỆ THỐNG PHÂN HỆ QUẢN LÝ NHÂN SỰ
 
 **1. Giới thiệu dự án**
-Tên dự án: Hệ thống phân hệ Quản lý Nhân sự (HRM System)
+Tên dự án: Hệ thống phân hệ Quản lý Nhân sự (HRM System).
 Dự án này được thực hiện trong khuôn khổ môn học Công nghệ mới trong phát triển ứng dụng CNTT tại Trường Đại học Công nghiệp TP.HCM. Hệ thống HRM được thiết kế nhằm hỗ trợ doanh nghiệp quản lý nhân sự một cách hiệu quả, giảm thiểu thao tác thủ công và tăng tính chính xác trong quá trình xử lý dữ liệu nhân sự.
 
 **2. Mục tiêu**
