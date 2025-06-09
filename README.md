@@ -16,3 +16,12 @@
 + Frontend: ReactJS, Ant Design, HTML, CSS
 + Backend: Php thuần
 + Tính năng mở rộng: Tích hợp QR Code vào chấm công từ xa qua điện thoại.
+
+**4. Hướng đang phát triển**
++ Chấm công bằng vân tay và face id trên IOS và Androi
++ Tích hợp thêm tính năng chat nội bộ bằng Chat Realtime
++ Quản lý tuyển dụng nhân viên
++ Quản lý đào tạo nội bộ
++ Đánh giá nhân viên
++ Quản lý chi phí
++ Thống kê
