@@ -13,7 +13,7 @@
 + Phân quyền người dùng rõ ràng: Quản trị viên và Nhân viên.
 
 **3. Công nghệ sử dụng**
-+ Frontend: ReactJS, Ant Design, HTML, CSS
++ Frontend: ReactJS, Ant Design, HTML, CSS, JS
 + Backend: Php thuần
 + Tính năng mở rộng: Tích hợp QR Code vào chấm công từ xa qua điện thoại.
 
